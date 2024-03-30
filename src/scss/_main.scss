@@ -94,3 +94,36 @@ section {
     font-weight: 700;
   }
 }
+
+.arrow {
+  width: 17px;
+  height: 8px;
+  margin-left: 15px;
+  transition: transform 0.4s ease;
+}
+
+.btn {
+  @extend %ui_font;
+  @include flex_center;
+
+  width: 222px;
+  height: 71px;
+
+  background-color: #fff;
+  color: $site_color;
+
+  &:hover .arrow {
+    transform: translateX(15px);
+  }
+}
+
+.alternativ-btn {
+  @extend .btn;
+
+  background-color: $site_color;
+  color: $main_color;
+
+  &--rigth {
+    margin: 0 0 0 auto;
+  }
+}

@@ -50,3 +50,9 @@ $title_font_size_full: 64px;
   height: 100%;
   object-fit: cover;
 }
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
