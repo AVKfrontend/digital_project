@@ -1,0 +1,58 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+a,
+button,
+p,
+div,
+ul,
+ol,
+li,
+menu {
+	padding: 0;
+	margin: 0;
+}
+
+a,
+button {
+	text-decoration: none;
+	color: inherit;
+	font: inherit;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+form,
+input,
+button,
+fieldset,
+textarea {
+	outline: none;
+	border: none;
+}
+
+input[type=text],
+input[type=submit],
+textarea {
+	-webkit-appearance: none;
+}
+
+img,
+svg {
+	display: block;
+}

@@ -1,0 +1,46 @@
+<main>
+  <section id="communication" class="communication">
+    <div class="container">
+      <h2 class="title">Связаться с нами</h2>
+      <form action="#" id="message" class="message">
+        <div class="message__wrup">
+          <div class="message__fields">
+            <input class="message__input" type="text" name="name" placeholder="Имя">
+            <div class="message__box">
+              <input class="message__input" type="tel" name="tel" placeholder="" required>
+              <label>Номер телефона<span>*</span></label>
+            </div>
+            <div class="message__box">
+              <input class="message__input" type="email" name="mail" placeholder="" required>
+              <label>E-mail<span>*</span></label>
+            </div>
+            <input class="message__input" type="text" name="product" placeholder="Интересующий товар/услуга">
+            <div class="message__box">
+              <textarea id="messagebody" class="message__area" name="messagebody" cols="30" rows="10" placeholder=""
+                required></textarea>
+              <label>Сообщение<span>*</span></label>
+            </div>
+          </div>
+          <div class="message__picture">
+            <img decoding="async" loading="lazy" srcset="
+      									img/image_12_800_534.webp 800w,
+      									img/image_12_1480_987.webp 1480w" sizes="
+      									(max-width: 574px) calc(100vw - 10%),
+      									(max-width: 766px) 540px,
+      									(max-width: 990px) 461px,
+      									(max-width: 1198px) 615px,
+      									749px" src="img/image_12_1480_987.jpg" alt="">
+          </div>
+        </div>
+        <span class="message__policy">
+          Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
+        </span>
+        <button class="alternativ-btn" type="submit">ОТПРАВИТЬ
+          <span class="arrow">
+            @@include("svg/arrow.html")
+          </span>
+        </button>
+      </form>
+    </div>
+  </section>
+</main>

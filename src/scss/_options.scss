@@ -1,0 +1,52 @@
+$main_color: #fff;
+$site_color: #333;
+$title_color: #bdbdbd;
+$footer_bg_color: #2c2c2c;
+$copyrigts_color: rgba(200, 200, 200, 0.50);
+$input_bg_color: #F3F3F3;
+$input_label_color: #8D8D8D;
+$input_star_color: #C30000;
+$title_color: #bdbdbd;
+
+$header_heigth: 5.1rem;
+
+$title_font_size_mob: 40px;
+$title_font_size_midl: 50px;
+$title_font_size_full: 64px;
+
+@mixin flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%footer_element {
+  width: fit-content;
+  margin: 30px auto 0;
+}
+
+%ui_font {
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+@mixin borders ($color) {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  transition: border-color 0.4s;
+
+  &:hover {
+    border-bottom-color: $color;
+    border-top-color: $color;
+  }
+}
+
+@mixin img_position {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
