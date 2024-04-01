@@ -1,4 +1,49 @@
 <main>
+  <section id="projects">
+    <div class="container">
+      <h2 class="title">Наши проекты</h2>
+      <ul class="gallery">
+        <li class="gallery__item gallery__item--57">
+          <img decoding="async" loading="lazy" src="img/001_570_255.webp" alt="ДОСУГОВЫЙ ЦЕНТР">
+          <a href="#" class="gallery__blind">
+            <h3 class="gallery__title"><span>ДОСУГОВЫЙ ЦЕНТР</svg></h3>
+            @@include("_button-inner.html",{"class":"gallery__act","label":"ПОДРОБНЕЕ"})
+          </a>
+        </li>
+        <li class="gallery__item gallery__item--57end">
+          <img decoding="async" loading="lazy" src="img/002_570_255.webp" alt="">
+          <a href="#" class="gallery__blind">
+            <h3 class="gallery__title"><span>ВЕЕР</svg></h3>
+            @@include("_button-inner.html",{"class":"gallery__act","label":"ПОДРОБНЕЕ"})
+          </a>
+        </li>
+        <li class="gallery__item gallery__item--27">
+          <img decoding="async" loading="lazy" src="img/003_270_255.webp" alt="">
+          <a href="#" class="gallery__blind">
+            <h3 class="gallery__title"><span>ДРОМ</svg></h3>
+            @@include("_button-inner.html",{"class":"gallery__act","label":"ПОДРОБНЕЕ"})
+          </a>
+        </li>
+        <li class="gallery__item gallery__item--47">
+          <img decoding="async" loading="lazy" src="img/004_470_255.webp" alt="">
+          <a href="#" class="gallery__blind">
+            <h3 class="gallery__title"><span>ЖИЛОЙ ЦЕНТР</svg></h3>
+            @@include("_button-inner.html",{"class":"gallery__act","label":"ПОДРОБНЕЕ"})
+          </a>
+        </li>
+        <li class="gallery__item gallery__item--37">
+          <img decoding="async" loading="lazy" src="img/005_370_255.webp" alt="">
+          <a href="#" class="gallery__blind">
+            <h3 class="gallery__title"><span>СПОРТ ЦЕНТР</svg></h3>
+            @@include("_button-inner.html",{"class":"gallery__act","label":"ПОДРОБНЕЕ"})
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="rigth">
+        @@include("_button-inner.html",{"class":"alternativ-btn","label":"ВСЕ ПРОЕКТЫ"})
+      </a>
+    </div>
+  </section>
   <section id="communication" class="communication">
     <div class="container">
       <h2 class="title">Связаться с нами</h2>
@@ -29,13 +74,15 @@
       									(max-width: 766px) 540px,
       									(max-width: 990px) 461px,
       									(max-width: 1198px) 615px,
-      									749px" src="img/image_12_1480_987.jpg" alt="">
+      									749px" src="img/image_12_1480_987.jpg" alt="Man with phon">
           </div>
         </div>
         <span class="message__policy">
           Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
         </span>
-        @@include("_button.html",{"class":"alternativ-btn","label":"ОТПРАВИТЬ"})
+        <button type="submit">
+          @@include("_button-inner.html",{"class":"alternativ-btn","label":"ОТПРАВИТЬ"})
+        </button>
       </form>
     </div>
   </section>

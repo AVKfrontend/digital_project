@@ -100,6 +100,128 @@
   }
 }
 
+//------projects-----//
+.gallery {
+  margin: 3rem 0 1.5rem;
+
+  &__item {
+    position: relative;
+    padding-bottom: 44.73684%;
+    background-color: $site_color;
+
+    @media screen and (max-width: 574px) {
+      &+& {
+        margin-top: 1rem;
+      }
+    }
+
+    &--57 {
+      grid-column: span 57;
+    }
+
+    &--57end {
+      grid-column-start: 61;
+      grid-column-end: -1;
+    }
+
+    &--27 {
+      grid-column: span 27;
+      grid-row: 3;
+    }
+
+    &--47 {
+      grid-column-start: 31;
+      grid-column-end: -42;
+      grid-row: 3;
+    }
+
+    &--37 {
+      grid-column-start: -38;
+      grid-column-end: -1;
+      grid-row: 3;
+    }
+
+    & img {
+      @include img_position;
+      right: 50%;
+      transform: translateX(50%);
+      width: auto;
+
+    }
+  }
+
+  &__blind {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-color: $site_color;
+    opacity: 0;
+    transition: opacity 0.4s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__title {
+    @extend .title;
+    position: absolute;
+    top: 18.82353%;
+    left: 13.8597%;
+    width: 72.45614%;
+    font-size: 20px;
+    line-height: 100%;
+
+    @media (min-width: 320px) and (max-width: 574px) {
+      font-size: 30px;
+    }
+
+    @media (min-width: 767px) and (max-width: 990px) {
+      font-size: 40px;
+    }
+
+    @media (min-width: 991px) {
+      font-size: 50px;
+    }
+
+    @media (min-width: 1199px) {
+      font-size: 64px;
+    }
+
+    & span {
+      color: #fff;
+    }
+  }
+
+  &__act {
+    position: absolute;
+    bottom: 20.78431%;
+    left: 13.8597%;
+    @extend %ui_font;
+    display: flex;
+    color: #fff;
+  }
+
+  @media screen and (min-width: 575px) {
+    display: grid;
+    grid-template-rows: 1fr 15px 1fr;
+    grid-template-columns: repeat(117, 1fr);
+  }
+
+  @media screen and (min-width: 991px) {
+    grid-template-rows: 1fr 30px 1fr;
+  }
+}
+
+.rigth {
+  display: block;
+
+  &>* {
+    margin: 0 0 0 auto;
+  }
+}
+
 //------communication-----//
 .message {
   margin-top: 1.1rem;
