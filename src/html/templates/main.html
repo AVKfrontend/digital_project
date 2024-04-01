@@ -1,4 +1,64 @@
 <main>
+  <section id="about">
+    <div class="container">
+      <div class="about">
+        <div class="about__back"></div>
+        <div class="about__pictures">
+          <div class="about__pictures-box">
+            <div class="about__picture about__picture--ratio98">
+              <img src="img/sec2_001_800_980.webp" alt="Glas house">
+            </div>
+            <div class="about__picture about__picture--ratio51 about__picture--margin">
+              <img src="img/sec2_002_1200_675.webp" alt="Over glas house">
+            </div>
+          </div>
+          <div class="about__picture about__picture--margin">
+            <picture>
+              <source srcset="img/sec2_003_1330_1270.webp" media="(min-width:1000px)">
+              <source srcset="img/sec2_003_935_893.webp" media="(min-width:400px)">
+              <source srcset="img/sec2_003_540_516.webp" media="(max-width:399px)">
+              <img src="img/sec2_003_1330_1270.webp" alt="Corner of glas house">
+            </picture>
+          </div>
+        </div>
+        <div class="about__info">
+          <h2 class="title">О компании</h2>
+          <p class="about__text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged.
+          </p>
+          <a href="#">
+            @@include("_button-inner.html",{"class":"btn","label":"ЧИТАТЬ"})
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="tasks">
+    <div class="container">
+      <h2 class="title">Основные задачи</h2>
+      <ul class="tasks__list">
+        <li class="tasks__item">
+          <div class="tasks__icon">
+            @@include("svg/one.html")
+          </div>
+          <p class="tasks__text">
+            <span>Создание комфортных условий и повышение качества обслуживания клиентов</span>
+          </p>
+        </li>
+        <li class="tasks__item">
+          <div class="tasks__icon">
+            @@include("svg/two.html")
+          </div>
+          <p class="tasks__text">Постоянно совершенствовать качество предоставляемых услуг путем обучения персонала,
+            закупки нового оборудования и усиленной рекламы на рынке</p>
+        </li>
+      </ul>
+    </div>
+  </section>
   <section id="projects">
     <div class="container">
       <h2 class="title">Наши проекты</h2>

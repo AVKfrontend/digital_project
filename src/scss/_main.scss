@@ -126,4 +126,8 @@ section {
   &--rigth {
     margin: 0 0 0 auto;
   }
+
+  .arrow svg path {
+    fill: $main_color;
+  }
 }
