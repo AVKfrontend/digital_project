@@ -1,6 +1,8 @@
 @use 'options' as *;
 @use 'main';
 
+@use "../../node_modules/animate.css/animate.css";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
 
 .menu {
   max-width: 636px;
@@ -19,6 +21,21 @@
       border-color: $site_color;
     }
   }
+}
+
+.line {
+  margin: 0;
+  color: #fff;
+  opacity: 0.1;
+  width: 100%;
+}
+
+.hide {
+  transform: translateY(50%);
+}
+
+.trans {
+  transition: transform 0.6s;
 }
 
 //------header-----//
@@ -96,6 +113,111 @@
       span {
         transform: rotate(180deg);
       }
+    }
+  }
+}
+
+//------intro-----//
+.intro {
+  padding-top: $header_heigth;
+
+  &__slick {
+    &-titles {
+      margin-top: 1rem;
+    }
+
+    &-btn {
+      @include flex_center;
+      width: 53px;
+      aspect-ratio: 1;
+      border: 1px solid $slider_btn_dorder_color;
+      transition: background-color 0.4s;
+
+      &:hover {
+        background-color: $slider_btn_hover_color;
+      }
+
+      &+& {
+        margin-left: 23px;
+      }
+
+      &-area {
+        display: flex;
+        align-items: center;
+        margin: 4.5rem 0;
+      }
+    }
+
+    &-dot-area {
+      position: relative;
+
+      ul {
+        @include flex_between;
+        align-items: center;
+        width: 142px;
+
+        font-size: 24px;
+        line-height: 100%;
+        color: $title_color;
+
+        .slick-active {
+          color: $site_color;
+        }
+      }
+
+      li+li:before {
+        content: "";
+        width: 43.822px;
+        height: 1px;
+        background-color: #E0E0E0;
+        transform: rotate(-45deg);
+        display: block;
+
+        position: absolute;
+        left: 49px;
+        top: 12px;
+      }
+
+      button:before {
+        content: "0";
+      }
+    }
+  }
+
+  &__picture {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1.07662;
+
+    img {
+      @include img_position;
+    }
+
+    .btn {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: 575px) {
+    @include flex_between;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+
+    &__info {
+      width: 34.188%;
+      padding-bottom: 25px;
+    }
+
+    &__slick-pictures {
+      width: 65.81197%;
+    }
+  }
+
+  @media (min-width: 991px) {
+    &__info {
+      padding-bottom: 107px;
     }
   }
 }

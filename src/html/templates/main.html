@@ -1,4 +1,33 @@
 <main>
+  <section id="intro" class="projects animate__animated animate__fadeInDown">
+    <div class="container">
+      <div class="intro">
+        <div class="intro__slick-pictures">
+          @@loop("_slide.html",[
+          {"img":"intro","alt":"Big house"},
+          {"img":"intro_revers","alt":"Big house in revers"}
+          ])
+        </div>
+        <div class="intro__info">
+          <div class="intro__slick-titles">
+            <h1 class="title">PROJECT<span>HOME</span></h1>
+            <h1 class="title">PROJECT<span>& HOME</span></h1>
+          </div>
+          <div class="intro__slick-btn-area">
+            <button class="intro__slick-btn intro__slick-btn--prev">
+              @@include("svg/arrow-prev.html")
+            </button>
+            <button class="intro__slick-btn intro__slick-btn--next">
+              @@include("svg/arrow-next.html")
+            </button>
+            <hr class="line">
+          </div>
+          <div class="intro__slick-dot-area">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="about">
     <div class="container">
       <div class="about">

@@ -3,6 +3,7 @@ const browserSync = require('browser-sync').create();
 const gulpFileInclude = require('gulp-file-include');
 const scss = require('gulp-sass')(require('sass'));
 const ts = require('gulp-typescript');
+const webpack = require("webpack-stream")
 
 const htmlmin = require('gulp-htmlmin');
 const minCSS = require('gulp-csso');
@@ -102,12 +103,13 @@ const cssInclude = () => {
 
 const jsInclude = () => {
 	return gulp.src(path.src.js)
-		.pipe(minify({
-			ext:{
-            	min:'.js'
-        	},
-			noSource: true
-		}))
+		.pipe(webpack(require("./webpack.config.js")))
+		// .pipe(minify({
+		// 	ext:{
+    //         	min:'.js'
+    //     	},
+		// 	noSource: true
+		// }))
 		.pipe(gulp.dest(path.dist.js))
 		.pipe(browserSync.reload({stream:true}));
 }
