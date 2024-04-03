@@ -122,14 +122,11 @@
   padding-top: $header_heigth;
 
   &__slick {
-    &-titles {
-      margin-top: 1rem;
-    }
-
     &-btn {
       @include flex_center;
+      flex-shrink: 0;
       width: 53px;
-      aspect-ratio: 1;
+      aspect-ratio: 1/1;
       border: 1px solid $slider_btn_dorder_color;
       transition: background-color 0.4s;
 
@@ -144,7 +141,7 @@
       &-area {
         display: flex;
         align-items: center;
-        margin: 4.5rem 0;
+        margin: 4.7rem 0;
       }
     }
 
@@ -327,13 +324,14 @@
     line-height: 100%;
     color: $site_color;
 
-    &+& {
-      margin-top: 1rem;
+    @media (max-width: 990px) {
+      &+& {
+        margin-top: 1rem;
+      }
     }
 
     @media (min-width: 400px) {
       display: flex;
-      align-items: center;
     }
 
     @media (min-width: 575px) {
@@ -371,6 +369,10 @@
 }
 
 //------projects-----//
+#projects {
+  margin-top: -10px;
+}
+
 .gallery {
   margin: 3rem 0 1.5rem;
 
@@ -498,7 +500,7 @@
 
 //------communication-----//
 .message {
-  margin-top: 1.1rem;
+  margin-top: 1.2rem;
 
   &__fields {
     width: 100%;
@@ -524,7 +526,7 @@
   &__input {
     display: block;
     width: 100%;
-    padding: 14px 21px;
+    padding: 15px 21px;
     background: $input_bg_color;
 
     &+label {
@@ -559,6 +561,7 @@
 
   &__area {
     @extend .message__input;
+    height: 147px;
   }
 
   &__picture {
@@ -605,7 +608,7 @@
   line-height: 24px;
 
   &__title {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     font-size: 16px;
     font-weight: 700;
   }
@@ -629,7 +632,7 @@
     letter-spacing: 0.42px;
 
     &+& {
-      margin-top: 0.8rem;
+      margin-top: 0.7rem;
     }
   }
 
@@ -645,7 +648,7 @@
       }
 
       &+& {
-        margin-top: 1.2rem;
+        margin-top: 1.1rem;
       }
     }
 
